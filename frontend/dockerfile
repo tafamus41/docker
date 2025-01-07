@@ -2,14 +2,12 @@ FROM node:current-alpine3.21
 
 WORKDIR / frontend
 
-#COPY hello.js /app
-
 COPY . .
 
-RUN mkdir -p logs
-RUN mkdir -p upload
-RUN npm install
+RUN npm i -g pnpm
+RUN pnpm i
 
-CMD ["npm", "start"]
 
-EXPOSE 8000
+CMD ["pnpm", "start"]
+
+EXPOSE 5173
