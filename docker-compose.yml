@@ -23,6 +23,7 @@ services:
         ports:
             # dış/iç port numaraları
             - 8000:8000
+            - 67:8000
         restart: on-failure # hata anında tekrar çalıştır.
   
     # $ docker compose up # compose çalıştır.
